@@ -44,6 +44,7 @@ RUN set -x; \
     && curl -fSL "${MEDIAWIKI_DOWNLOAD_URL}.sig" -o mediawiki.tar.gz.sig \
     && gpg --verify mediawiki.tar.gz.sig \
     && tar -xf mediawiki.tar.gz -C /var/www/html --strip-components=1 \
+    && rm -rf mediawiki.tar.gz* \
      \
     # Install composer \
 	&& EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig) \
@@ -59,7 +60,6 @@ RUN set -x; \
     # Clean up \
     && export DEBIAN_FRONTEND="" \
     && apt-get remove -yq --purge libpng-dev libicu-dev g++ wget \
-    && apt-get clean \
     && du -sh /var/www/html \
     && apt-get -qq clean \
 	&& rm -rf /tmp/* /var/tmp/* /var/cache/apt/* /var/lib/apt/lists/* \
