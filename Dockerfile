@@ -1,4 +1,4 @@
-FROM php:7.1.1-apache
+FROM php:7-apache
 
 # Waiting in anticipation for build-time arguments
 # https://github.com/docker/docker/issues/14634
