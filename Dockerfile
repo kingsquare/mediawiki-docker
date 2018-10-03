@@ -2,8 +2,8 @@ FROM php:7-apache
 
 # Waiting in anticipation for build-time arguments
 # https://github.com/docker/docker/issues/14634
-ENV MEDIAWIKI_VERSION 1.30
-ENV MEDIAWIKI_VERSION_FULL 1.30.0
+ENV MEDIAWIKI_VERSION 1.31
+ENV MEDIAWIKI_VERSION_FULL 1.31.1
 
 RUN set -x; \
     export DEBIAN_FRONTEND=noninteractive \
