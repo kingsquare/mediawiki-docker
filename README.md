@@ -1,3 +1,5 @@
+[![Docker Pulls](https://img.shields.io/docker/pulls/kingsquare/mediawiki.svg)](https://hub.docker.com/r/kingsquare/mediawiki/)
+
 # What is MediaWiki?
 
 MediaWiki is a free and open-source wiki app, used to power wiki websites such
